@@ -4,7 +4,7 @@ class PeopleController < ApplicationController
   end
 
   def create    
-    Person.create(person_params)
+    Person.create(persons_params)
     redirect_to people_path
   end
 
@@ -14,7 +14,7 @@ class PeopleController < ApplicationController
 
   private
 
-  def person_params
+  def persons_params
     params.require(:person).permit(:name)
   end
 end
